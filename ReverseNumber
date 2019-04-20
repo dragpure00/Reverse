@@ -1,0 +1,39 @@
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+//function that performs reversing user input  number
+int reverse(int n){
+int num;
+while(n!=0){
+int r=n%10;
+num=num*10+r;
+n=n/10;}
+return(num);
+}
+int reverse(int n);//calls in reverse function
+
+int main()
+      {
+system("clear");
+int r=0;
+    int p;
+cout << "Enter a positive number: " << endl;
+cin >> p;
+while(p>0)
+    {
+if(p>0)
+  {
+cout<<"Reverse: "<<reverse(p)<<endl;//outputs from reverse function
+cout<<"Pick another positive"<<endl;
+cin >> p;
+    }
+
+else
+  {
+    return 0;
+  }
+
+    }
+
+cout<<"Program has been terminated due to input being a negative number. "<<endl;
+}
